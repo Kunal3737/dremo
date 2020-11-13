@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/dremo/static/css/main.636c33cd.chunk.css",
+    "main.js": "/dremo/static/js/main.c01a6d4a.chunk.js",
+    "main.js.map": "/dremo/static/js/main.c01a6d4a.chunk.js.map",
+    "runtime-main.js": "/dremo/static/js/runtime-main.de3b8524.js",
+    "runtime-main.js.map": "/dremo/static/js/runtime-main.de3b8524.js.map",
+    "static/js/2.5205c1d6.chunk.js": "/dremo/static/js/2.5205c1d6.chunk.js",
+    "static/js/2.5205c1d6.chunk.js.map": "/dremo/static/js/2.5205c1d6.chunk.js.map",
+    "static/js/3.72ecc558.chunk.js": "/dremo/static/js/3.72ecc558.chunk.js",
+    "static/js/3.72ecc558.chunk.js.map": "/dremo/static/js/3.72ecc558.chunk.js.map",
+    "index.html": "/dremo/index.html",
+    "static/css/main.636c33cd.chunk.css.map": "/dremo/static/css/main.636c33cd.chunk.css.map",
+    "static/js/2.5205c1d6.chunk.js.LICENSE.txt": "/dremo/static/js/2.5205c1d6.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/dremo/static/media/logo.103b5fa1.svg",
+    "static/media/logo.76e8dfd7.svg": "/dremo/static/media/logo.76e8dfd7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de3b8524.js",
+    "static/js/2.5205c1d6.chunk.js",
+    "static/css/main.636c33cd.chunk.css",
+    "static/js/main.c01a6d4a.chunk.js"
+  ]
+}
