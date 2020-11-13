@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    fontSize: "15px",
+    fontSize: "14px",
   },
   appBar: {
     backgroundColor: "#fafafa",
