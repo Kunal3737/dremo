@@ -11,9 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-#google_translate_element {
-  position: absolute;
-  top: 0;
-  right: 2px;
-}

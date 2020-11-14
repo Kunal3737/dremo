@@ -13,6 +13,7 @@ import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import { withRouter } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +24,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    fontSize: "14px",
+    fontSize: "16px",
+    "&:hover": {
+      color: "blue",
+      fontSize: "18px",
+      cursor: "pointer",
+    },
   },
   appBar: {
     backgroundColor: "#fafafa",
@@ -43,54 +49,84 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+const Header = (props) => {
   const classes = useStyles();
 
+  console.log(props);
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar className={classes.appBar}>
           <Grid item>
-            <img
-              src={Logo}
-              // style={{
-              //   marginLeft: "100px",
-              // }}
-              height="100px"
-            />
+            <img src={Logo} height="90px" />
           </Grid>
           <Grid container justify="flex-end" spacing="2" alignItems="center">
-            <Grid item>
+            <Grid
+              item
+              onClick={() => {
+                props.history.push("/");
+              }}
+            >
               <Typography variant="h6" className={classes.title}>
                 HOME
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid
+              item
+              onClick={() => {
+                props.history.push("/products");
+              }}
+            >
               <Typography variant="h6" className={classes.title}>
                 PRODUCTS
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid
+              item
+              onClick={() => {
+                props.history.push("/affiliations");
+              }}
+            >
               <Typography variant="h6" className={classes.title}>
                 AFFILIATIONS
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid
+              item
+              onClick={() => {
+                props.history.push("/enquiry");
+              }}
+            >
               <Typography variant="h6" className={classes.title}>
                 ENQUIRY
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid
+              item
+              onClick={() => {
+                props.history.push("/suppliers");
+              }}
+            >
               <Typography variant="h6" className={classes.title}>
                 SUPPLIERS
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid
+              item
+              onClick={() => {
+                props.history.push("/aboutus");
+              }}
+            >
               <Typography variant="h6" className={classes.title}>
                 ABOUT US
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid
+              item
+              onClick={() => {
+                props.history.push("/contactus");
+              }}
+            >
               <Typography variant="h6" className={classes.title}>
                 CONTACT US
               </Typography>
@@ -115,11 +151,13 @@ export default function Header() {
                 style={{
                   position: "static",
                 }}
-              ></div>
+              />
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
     </div>
   );
-}
+};
+
+export default withRouter(Header);
