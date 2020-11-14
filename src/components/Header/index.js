@@ -14,6 +14,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import { withRouter } from "react-router";
+import classNames from "classnames";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,10 +26,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     fontSize: "16px",
+    cursor: "pointer",
     "&:hover": {
-      color: "blue",
       fontSize: "18px",
-      cursor: "pointer",
     },
   },
   appBar: {
@@ -47,12 +47,17 @@ const useStyles = makeStyles((theme) => ({
   instagram: {
     color: "#ca37ac",
   },
+  currentRoute: {
+    color: "blue",
+    fontSize: "18px",
+    cursor: "pointer",
+  },
 }));
 
 const Header = (props) => {
   const classes = useStyles();
+  let currentRoute = props.location.pathname.slice(1);
 
-  console.log(props);
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -64,10 +69,15 @@ const Header = (props) => {
             <Grid
               item
               onClick={() => {
-                props.history.push("/");
+                props.history.push("/home");
               }}
             >
-              <Typography variant="h6" className={classes.title}>
+              <Typography
+                variant="h6"
+                className={classNames(
+                  currentRoute === "home" ? classes.currentRoute : classes.title
+                )}
+              >
                 HOME
               </Typography>
             </Grid>
@@ -77,7 +87,14 @@ const Header = (props) => {
                 props.history.push("/products");
               }}
             >
-              <Typography variant="h6" className={classes.title}>
+              <Typography
+                variant="h6"
+                className={classNames(
+                  currentRoute !== "products"
+                    ? classes.title
+                    : classes.currentRoute
+                )}
+              >
                 PRODUCTS
               </Typography>
             </Grid>
@@ -87,7 +104,14 @@ const Header = (props) => {
                 props.history.push("/affiliations");
               }}
             >
-              <Typography variant="h6" className={classes.title}>
+              <Typography
+                variant="h6"
+                className={classNames(
+                  currentRoute !== "affiliations"
+                    ? classes.title
+                    : classes.currentRoute
+                )}
+              >
                 AFFILIATIONS
               </Typography>
             </Grid>
@@ -97,7 +121,14 @@ const Header = (props) => {
                 props.history.push("/enquiry");
               }}
             >
-              <Typography variant="h6" className={classes.title}>
+              <Typography
+                variant="h6"
+                className={classNames(
+                  currentRoute !== "enquiry"
+                    ? classes.title
+                    : classes.currentRoute
+                )}
+              >
                 ENQUIRY
               </Typography>
             </Grid>
@@ -107,7 +138,14 @@ const Header = (props) => {
                 props.history.push("/suppliers");
               }}
             >
-              <Typography variant="h6" className={classes.title}>
+              <Typography
+                variant="h6"
+                className={classNames(
+                  currentRoute !== "suppliers"
+                    ? classes.title
+                    : classes.currentRoute
+                )}
+              >
                 SUPPLIERS
               </Typography>
             </Grid>
@@ -117,7 +155,14 @@ const Header = (props) => {
                 props.history.push("/aboutus");
               }}
             >
-              <Typography variant="h6" className={classes.title}>
+              <Typography
+                variant="h6"
+                className={classNames(
+                  currentRoute !== "aboutus"
+                    ? classes.title
+                    : classes.currentRoute
+                )}
+              >
                 ABOUT US
               </Typography>
             </Grid>
@@ -127,7 +172,14 @@ const Header = (props) => {
                 props.history.push("/contactus");
               }}
             >
-              <Typography variant="h6" className={classes.title}>
+              <Typography
+                variant="h6"
+                className={classNames(
+                  currentRoute !== "contactus"
+                    ? classes.title
+                    : classes.currentRoute
+                )}
+              >
                 CONTACT US
               </Typography>
             </Grid>

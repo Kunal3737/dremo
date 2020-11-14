@@ -13,6 +13,7 @@ function App() {
     <>
       <Header />
       <Route exact path="/" component={Home} />
+      <Route exact path="/home" component={Home} />
       <Route exact path="/products" component={Products} />
       <Route exact path="/affiliations" component={Affiliations} />
       <Route exact path="/enquiry" component={Enquiry} />
